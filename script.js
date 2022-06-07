@@ -1,11 +1,17 @@
 // btn active
 
-const menu = document.getElementById('menu-btn'), counter=0;
+const menu = document.getElementById('menu-btn');
 const hyperlink = document.getElementById('hyperlink');
+let counter=0;
 
 menu.addEventListener('click', e=> {
-    hyperlink.classList.toggle('active');
-    console.log('hola')
+    if(counter == 0){
+        hyperlink.style.display = 'none';
+        counter = 1;
+    }else{
+        hyperlink.style.display = 'block';
+        counter = 0;
+    }
 })
 
 //https://www.youtube.com/watch?v=nvgeFhLaSuA&t=697s

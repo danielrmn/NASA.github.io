@@ -1,0 +1,21 @@
+/* header */
+
+.search-hero {
+    width: 800px;
+}
+
+.search-hero input{
+    width: 90%;
+}
+
+
+/* main content */
+
+.all-preview-content-hero {
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-around;
+}
+
+.preview-content-hero {
+    width: 95%;
+}
