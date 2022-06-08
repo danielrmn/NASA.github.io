@@ -191,3 +191,124 @@ footer p{
     line-height: 1.5rem;
     padding: 15px;
 }
+
+/* file index - second parte */
+
+.header-nav-hero {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    background-color: #74757a;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-nav-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url('accets/nasaLogo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-nav-search {
+    width: 200px;
+    height: 45px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.header-nav-search input {
+    width: 80%;
+    height: 100%;
+    background: none;
+    border: none;
+    font-size: 1.1rem;
+    color: #ffff;
+}
+
+.header-nav-search input::placeholder {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.1rem;
+    color: #ffff;
+}
+.header-nav-search input:hover {
+    font-weight: bold;
+}
+
+/* main section */
+
+.main-section-file {
+    padding: 15px;
+    display: grid;
+    grid-template-rows: auto;
+    justify-items: flex-start;
+}
+
+.main-section-file h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.main-section-file div {
+    margin-top: 20px;
+}
+
+.main-section-file-img{
+    width: 100%;
+    min-height: 400px;
+    background-image: url('accets/image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.main-section-file-description p{
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8rem;
+}
+
+.main-section-info-hero {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-section-info-hero p {
+    font-size: 1.1rem;
+    color: #fff;
+}
+
+.main-section-info-hero p:nth-child(1) {
+    color: #0b3d91;
+    padding-right: 10px;
+}
+
+.main-section-button{
+    margin: 0px auto;
+    width: 200px;
+    height: 50px;
+    background-color: #0b3d91;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-section-button a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+}
