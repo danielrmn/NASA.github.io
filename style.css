@@ -10,12 +10,6 @@ body{
     font-family: 'Raleway', sans-serif;
 }
 
-/* header section */
-
-/* .header-section {
-    display: grid;
-    grid-template-rows: auto;
-} */
 
 .header-section {
     width: 100%;
@@ -85,7 +79,7 @@ body{
     align-items: center;
 }
 
-.header-section-botton span {
+#menu-btn {
     padding: 14px 20px;
     cursor: pointer;
 }
@@ -266,7 +260,7 @@ footer p{
 
 .main-section-file-img{
     width: 100%;
-    min-height: 400px;
+    height: 400px;
     background-image: url('accets/image.jpg');
     background-position: center;
     background-repeat: no-repeat;
