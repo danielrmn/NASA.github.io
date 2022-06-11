@@ -14,34 +14,31 @@ menu.addEventListener('click', e=> {
     }
 })
 
-//https://www.youtube.com/watch?v=nvgeFhLaSuA&t=697s
+// NASA API
 
-// window.addEventListener('load', getData);
+const searchButton = document.querySelector('.search-button');
+searchButton.addEventListener("keydown", (e)=>{
+	if(e.key === "Enter"){
+    	console.log("searching");
+    }
+})
 
-// function getData() {
-//     const nasa_api = 'duc6yvTa7DqRymjhXS8sshFgObe9DU501cE7KSWH';
-//     const route = `https://api.nasa.gov/planetary/apod?api_key=${nasa_api}`;
+sendApiPaquets();
+async function sendApiPaquets(){
+    let nasa_api = 'duc6yvTa7DqRymjhXS8sshFgObe9DU501cE7KSWH';
+    let response = await fetch(`https://api.nasa.gov/planetary/apod?api_key=${nasa_api}`);
+    //console.log(response);
+    let data = await response.json();
+    //console.log(data)
+    useApiData(data);
+}
 
-//     fetch(route)
-//     .then(reply => reply.json())
-//     .then(reply => showData(reply))
-// }
+function useApiData(data) {
+    let titleM = document.querySelector('.title').innerHTML = data.title;
+    let media = document.querySelector('.preview-content').innerHTML = `<img src="${data.url}"></img>`;
+    let descriptionM = document.querySelector('.description').innerHTML = data.explanation;
+    let dateM = document.querySelector('.date').innerHTML = data.date;
+    let copyrightM =document.querySelector('.copyright').innerHTML =data.copyright;
 
-// function showData(date, explanation, media_type, title, service_version, copyright, thumbnail_url) {
-//     const date = document.querySelector('#date');
-//     date.innerHTML = date;
-//     const explanation = document.querySelector('#explanation');
-//     explanation.innerHTML = date;
-//     const media_type = document.querySelector('#media_type');
-//     const title = document.querySelector('#title');
-//     title.innerHTML = date;
-//     const service_version = document.querySelector('#service_version');
-//     service_version.innerHTML = date;
-//     const copyright = document.querySelector('#copyright');
-//     copyright.innerHTML = date;
-
-//     if(media_type == 'video'){
-//         media_type.innerHTML = media_type;
-
-//     }
-// }
+    //console.log(media)
+}
